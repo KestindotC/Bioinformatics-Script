@@ -30,6 +30,18 @@ awk 'NF > 1 {a[$1] = a[$1]"\t"$2} END {for( i in a ) print i a[i]}' $HTseq_DIR/*
 python Reorganizer.py -f file1.txt -f file2.txt -o output_dir
 ```
 
+### [GDC_Donload](GDC_Donload.sh)
 
+用在當需要下載到需要token的大定序檔案的時候才需要用到，環境部分參考Gist上的教學
+記得改output路徑跟token路徑，後面接TCGA官網上面的id，每一行存一個sample。
+
+``` bash
+sh GDC_Download.sh idfiles.txt
+```
+
+### [immune_RNASeq](immune_RNASeq.m)     
+
+碩士論文中使用的Gene set scoring的算法，要應用在其他地方也是可以使用，記得把當中的參數改掉
+另外在2013以後的版本已經更新寫法，如果有需要再找我拿就好。執行直接在MATLAB當中執行。
 
 
